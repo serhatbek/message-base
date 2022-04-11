@@ -1,0 +1,19 @@
+@mixin bg-cover {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+@mixin flexBox($direction, $justify, $align, $wrap) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  
+  @if $direction {
+    flex-direction: $direction;
+  }
+  
+  @if $wrap {
+    flex-wrap: $wrap;
+  }
+}
