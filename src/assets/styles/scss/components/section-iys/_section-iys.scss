@@ -1,0 +1,31 @@
+.section-iys {
+  padding: 36px 0;
+  @include flexBox($direction:false, $justify: center, $align:center, $wrap:nowrap);
+  .container {
+    color: $white;
+    max-width: 1030px;
+    border-radius: 10;
+    padding: 50px 96px 30px 50px;
+    @include flexBox($direction:false, $justify: space-between, $align:center, $wrap:nowrap);
+    background: linear-gradient(270deg, rgba(239,183,0,1) 0%, rgba(246,137,41,1) 100%);
+  }
+  
+  &__title {
+    font-size: 31px;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+
+  &__desc {
+    margin-bottom: 32px;
+  }
+
+  &__img {
+    width: 122px;
+    align-self: baseline;
+  }
+
+  &__btn:first-child {
+    margin-right: 20px;
+  }
+}

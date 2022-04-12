@@ -5,12 +5,12 @@
   display: inline-block;
   cursor: pointer;
 
-  &__blue {
+  &--blue {
     color: $white;
     background: linear-gradient(270deg, rgba(40,128,171,1) 0%, rgba(72,187,244,1) 100%);
   }
 
-  &__white {
+  &--white {
     color: $dark-sky-blue;
     background-color: $white;
     border: 2px solid $dark-sky-blue;
