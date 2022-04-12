@@ -1,5 +1,6 @@
 .section-features {
   .container {
+    padding: 0 70px;
     border-radius: 10px;
     box-shadow: inset 0 0 0 2px #f7fafc, inset 0 0 0 3px #edf4f7;
     @include flexBox($direction:column, $justify: center, $align: center, $wrap:nowrap)
@@ -14,17 +15,18 @@
 
   &__box {
     width: 100%;
-    padding: 85px 70px;
+    padding: 85px 0;
     border-bottom: 1px solid $border3;
     @include flexBox($direction:column, $justify: center, $align: center, $wrap:nowrap)
   }
 
   &__items {
-    @include flexBox($direction:false, $justify: space-between, $align: center, $wrap:nowrap)
+    width: 100%;
+    @include flexBox($direction:false, $justify: center, $align: center, $wrap:nowrap)
   }
 
   &__item {
-    max-width: 770px;
+    max-width: 290px;
     text-align: center;
     @include flexBox($direction:column, $justify: center, $align: center, $wrap:nowrap)
   }
