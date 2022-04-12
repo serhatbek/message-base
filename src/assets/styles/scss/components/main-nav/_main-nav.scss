@@ -7,26 +7,33 @@
     box-sizing: border-box;
     width: 190px;
     @include flexBox($direction:column, $justify: center, $align:center, $wrap:nowrap);
+    position: relative;
+    padding-top: 48px;
+    transition: all .2s ease-in-out;
   }
 
-  &__item:hover::after {
-    content: url(../images/path.png);
+  &__item::after {
+    content: "";
     @include bg-cover;
-    object-fit: contain;
+    background-image: url(../images/path.png);
     width: 184px;
     height: 8px;
+    background-size: 184px 8px;
     display: block;
+    visibility: hidden;
+  }
+
+  &__item:hover:after {
+    visibility: visible;
   }
 
   &__icon {
     width: 48px;
     z-index: 3;
-  }
-
-  &__item:hover .main-nav__link {
-    color: $white;
-    background-image: url(../images/rectangle.png);
-    @include bg-cover;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left: -24px;
   }
 
   &__link {
@@ -36,5 +43,11 @@
     border-radius: 22px;
     @include flexBox($direction:false, $justify: center, $align:center, $wrap:nowrap);
     transition: all .2s ease-in-out;
+  }
+
+  &__item:hover .main-nav__link {
+    color: $white;
+    background-image: url(../images/rectangle.png);
+    @include bg-cover;
   }
 }

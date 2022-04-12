@@ -1,0 +1,61 @@
+.section-tabs {
+  &__header {
+    height: 65px;
+    @include flexBox($direction:false, $justify: center, $align:center, $wrap:nowrap);
+  }
+
+  &__btn {
+    width: 160px;
+    font-size: 17px;
+    font-weight: bold;
+    line-height: 1.47;
+    color: $text;
+    cursor: pointer;
+  }
+
+  &__btn.js-active {
+    color: $orange;
+  }
+
+  &__body {
+    padding-top: 40px;
+    background: linear-gradient(270deg, rgba(34,44,127,1) 48%, rgba(63,72,154,1) 100%);
+  }
+
+  &__content {
+    text-align: center;
+    @include flexBox($direction:false, $justify: center, $align:center, $wrap:nowrap);
+    display: none;
+  }
+
+  &__content.js-active {
+    display: flex;
+  }
+
+  &__img {
+    max-width: 575px;
+  }
+
+  &__cta {
+    margin-top: -60px;
+  }
+
+  &__title {
+    font-size: 41px;
+    font-weight: 800;
+    line-height: 1.22;
+    color: $white;
+    margin-bottom: 20px;
+  }
+
+  &__desc {
+    color: $white;
+    line-height: 1.47;
+    margin-bottom: 25px;
+  }
+
+  &__link {
+    font-size: 17px;
+    box-shadow: 0 15px 20px -10px rgba(0, 0, 0, 0.5), 0 40px 20px -20px rgba(0, 0, 0, 0.2);
+  }
+}
