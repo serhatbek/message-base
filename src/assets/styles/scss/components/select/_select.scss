@@ -1,0 +1,40 @@
+.custom-select {
+  width: 215px; 
+  position: relative;
+  
+  select {
+  width: 100%;
+  height: 60px;
+  border-radius: 10px;
+  border: solid 1px $border1;
+  padding: 8px 14px;
+  font-size: 17px;
+  font-weight: bold;
+  line-height: 1.35;
+  color: $text;
+  appearance: none;
+  line-height: 1.07;
+
+    option {
+      color: $dark-sky-blue;
+    }
+  }
+
+  &::after {
+    content: url(../images/icons-12.png);
+    @include bg-cover;
+    max-width: 12px;
+    width: 100%;
+    position: absolute;
+    right: 14px;
+    top: 24px;
+    pointer-events: none;
+  }
+
+  &__title {
+    font-size: 17px;
+    font-weight: bold;
+    line-height: 1.35;
+    color: $text;
+  }
+}

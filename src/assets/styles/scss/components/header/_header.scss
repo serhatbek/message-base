@@ -1,0 +1,11 @@
+.header {
+  height: 148px;
+  .container {
+    height: 100%;
+    @include flexBox($direction: false, $justify: space-between, $align:center, $wrap: nowrap )
+  }
+
+  .logo {
+    max-width: 200px;
+  }
+}

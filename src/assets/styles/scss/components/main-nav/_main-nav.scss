@@ -1,0 +1,40 @@
+.main-nav {
+  &__list {
+    @include flexBox($direction:false, $justify: center, $align:center, $wrap:nowrap)
+  }
+
+  &__item {
+    box-sizing: border-box;
+    width: 190px;
+    @include flexBox($direction:column, $justify: center, $align:center, $wrap:nowrap);
+  }
+
+  &__item:hover::after {
+    content: url(../images/path.png);
+    @include bg-cover;
+    object-fit: contain;
+    width: 184px;
+    height: 8px;
+    display: block;
+  }
+
+  &__icon {
+    width: 48px;
+    z-index: 3;
+  }
+
+  &__item:hover .main-nav__link {
+    color: $white;
+    background-image: url(../images/rectangle.png);
+    @include bg-cover;
+  }
+
+  &__link {
+    width: 100%;
+    height: 44px;
+    color: $link;
+    border-radius: 22px;
+    @include flexBox($direction:false, $justify: center, $align:center, $wrap:nowrap);
+    transition: all .2s ease-in-out;
+  }
+}
