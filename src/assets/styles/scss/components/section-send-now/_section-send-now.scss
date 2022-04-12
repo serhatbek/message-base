@@ -1,0 +1,28 @@
+.section-send-now {
+  padding-top: 80px;
+  padding-bottom: 53px;
+  @include flexBox($direction:false, $justify: center, $align:center, $wrap:nowrap);
+
+  .container {
+    color: $white;
+    max-width: 1030px;
+    border-radius: 10;
+    padding: 40px 70px 40px 50px;
+    background: linear-gradient(270deg, rgba(34,44,127,1) 31%, rgba(63,72,154,1) 100%);
+    @include flexBox($direction:false, $justify: space-between, $align:center, $wrap:nowrap);
+  }
+
+  &__title {
+    @extend .section-iys__title;
+  }
+
+  &__desc {
+    @extend .section-iys__desc;
+    margin-bottom: 0;
+  }
+
+  &__btn {
+    padding-left: 64px;
+    padding-right: 64px;
+  }
+}
