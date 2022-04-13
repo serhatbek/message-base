@@ -4,3 +4,27 @@
   margin: 0 auto;
   padding: 0 toRem(15);
 }
+
+.margin--both {
+  margin: 0 40px;
+
+  @media screen and (max-width: 930px)  {
+    margin: 0;
+  }
+}
+
+.margin--right {
+  margin-right: 40px;
+
+  @media screen and (max-width: 930px)  {
+    margin: 0;
+  }
+}
+
+.margin--left {
+  margin-left: 40px;
+
+  @media screen and (max-width: 930px)  {
+    margin: 0;
+  }
+}

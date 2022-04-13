@@ -20,12 +20,20 @@
   &__body {
     padding-top: 40px;
     background: linear-gradient(270deg, rgba(34,44,127,1) 48%, rgba(63,72,154,1) 100%);
+
+    @media screen and (max-width: 996px)  {
+      padding-top: 80px;
+    }
   }
 
   &__content {
     text-align: center;
     @include flexBox($direction:false, $justify: center, $align:center, $wrap:nowrap);
     display: none;
+
+    @media screen and (max-width: 996px)  {
+      flex-direction: column;
+    }
   }
 
   &__content.js-active {
@@ -34,10 +42,19 @@
 
   &__img {
     max-width: 575px;
+
+    @media screen and (max-width: 996px)  {
+      order: 2;
+    }
   }
 
   &__cta {
     margin-top: -60px;
+
+    @media screen and (max-width: 996px)  {
+      margin-top: 0;
+      margin-bottom: 38px;
+    }
   }
 
   &__title {
@@ -46,16 +63,31 @@
     line-height: 1.22;
     color: $white;
     margin-bottom: 20px;
+
+    @media screen and (max-width: 560px)  {
+      font-size: 29px;
+    }
   }
 
   &__desc {
     color: $white;
     line-height: 1.47;
     margin-bottom: 25px;
+    font-size: 17px;
+
+
+    @media screen and (max-width: 560px)  {
+      font-size: 15px;
+      font-weight: 300;
+    }
   }
 
   &__link {
     font-size: 17px;
     box-shadow: 0 15px 20px -10px rgba(0, 0, 0, 0.5), 0 40px 20px -20px rgba(0, 0, 0, 0.2);
+
+    @media screen and (max-width: 560px)  {
+      font-size: 14px;
+    }
   }
 }
