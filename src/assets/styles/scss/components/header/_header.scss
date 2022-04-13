@@ -8,5 +8,13 @@
 
   .logo {
     max-width: 200px;
+
+    @media screen and (max-width: 1060px)  {
+    max-width: 169px;
+    }
+
+    @media screen and (max-width: 630px)  {
+    max-width: 141px;
+    }
   }
 }

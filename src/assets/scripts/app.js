@@ -22,3 +22,23 @@ scrollTopBtn.addEventListener('click', () => {
     behavior: 'smooth',
   });
 });
+
+// ==============
+
+const openModalBtn = document.querySelector('.js-iysModalBtn');
+const closeModalBtn = document.querySelector('.iys-modal__close');
+const body = document.querySelector('body');
+const iysModal = document.querySelector('.iys-modal');
+
+openModalBtn.addEventListener('click', () => openModal());
+closeModalBtn.addEventListener('click', () => closeModal());
+
+function openModal() {
+  iysModal.classList.add('js-open-modal');
+  body.classList.add('js-overflowHidden');
+}
+
+function closeModal() {
+  iysModal.classList.remove('js-open-modal');
+  body.classList.remove('js-overflowHidden');
+}

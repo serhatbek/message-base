@@ -27,6 +27,10 @@
   &__item:hover:after {
     visibility: visible;
   }
+  
+  &__item.current::after {
+    visibility: visible;
+  }
 
   &__icon {
     width: 48px;
@@ -35,6 +39,12 @@
     top: 0;
     left: 50%;
     margin-left: -24px;
+    transition: all .3s ease-in-out;
+  }
+
+  &__item:hover &__icon,
+  &__item.current &__icon {
+    top: 6px;
   }
 
   &__link {
@@ -51,9 +61,5 @@
     color: $white;
     background-image: url(../images/rectangle.png);
     @include bg-cover;
-  }
-
-  &__item.current::after {
-    visibility: visible;
   }
 }

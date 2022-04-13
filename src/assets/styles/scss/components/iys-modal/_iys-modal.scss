@@ -1,0 +1,48 @@
+.iys-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 11;
+  overflow: hidden;
+  background-image: linear-gradient(120deg, rgba(83, 106, 116, 0.5) 13%, rgba(41, 56, 64, 0.6) 86%);
+  @include flexBox($direction:false, $justify: center, $align:center, $wrap:nowrap);
+  display: none;
+
+  &.js-open-modal {
+    display: flex;
+  }
+
+  &__box {
+    max-width: 500px;
+    width: 100%;
+    background-color: $white;
+    border-radius: 10px;
+    color: $text;
+    padding: 45px 30px 50px 30px;
+    @include flexBox($direction:column, $justify: center, $align:center, $wrap:nowrap);
+
+    @media screen and (max-width: 560px)  {
+      padding: 45px 15px 50px 15px;
+      margin: 0 10px;
+    }
+  }
+  
+  &__title {
+    font-size: 31px;
+  }
+
+  &__desc {
+    font-size: 17px;
+    line-height: 1.47;
+    padding: 20px 20px 0 20px;
+    background-color: #f7fafc;
+    margin-bottom: 29px;
+  }
+
+  &__close {
+    width: 190px;
+    text-align: center;
+  }
+}

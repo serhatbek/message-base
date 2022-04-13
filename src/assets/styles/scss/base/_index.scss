@@ -1,0 +1,35 @@
+.index-page {
+  background-color: #37aeeb;
+  @include flexBox($direction:column, $justify: center, $align:center, $wrap:nowrap);
+  width: 100%;
+  height: 100vh;
+
+
+  h1 {
+    margin-bottom: 30px;
+    font-size: 24px;
+  }
+
+  .index-container {
+    max-width: 980px;
+    width: 100%;
+    height: auto;
+    padding: 40px 20px;
+    border-radius: 16px;
+    background-color: $white;
+
+    h2 {
+      margin-bottom: 30px;
+      font-size: 19px;
+    }  
+
+    h3 {
+    font-size: 17px;
+    margin-bottom: 4px;
+    }
+
+    a {
+    color: $text;
+    }
+  }
+}

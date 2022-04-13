@@ -4,22 +4,27 @@
   margin-bottom: 8px;
   
   select {
-  width: 100%;
-  height: 60px;
-  border-radius: 10px;
-  border: solid 1px $border1;
-  padding: 8px 14px;
-  font-size: 17px;
-  font-weight: bold;
-  line-height: 1.35;
-  color: $text;
-  appearance: none;
-  line-height: 1.07;
-  cursor: pointer;
+    width: 100%;
+    height: 60px;
+    border-radius: 10px;
+    border: solid 1px $border1;
+    padding: 8px 14px;
+    font-size: 17px;
+    font-weight: bold;
+    line-height: 1.35;
+    color: $text;
+    appearance: none;
+    line-height: 1.07;
+    cursor: pointer;
 
     option {
       color: $dark-sky-blue;
     }
+  }
+
+  select:focus {
+    border-radius: 10px;
+    border: solid 1px $border1;
   }
 
   &::after {
