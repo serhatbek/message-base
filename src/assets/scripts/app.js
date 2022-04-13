@@ -10,3 +10,15 @@ tabButtons.forEach((btn, index) => {
     tabItems[index].classList.add('js-active');
   });
 });
+
+// ==============
+
+const scrollTopBtn = document.querySelector('.scroll-top');
+
+scrollTopBtn.addEventListener('click', () => {
+  window.scrollTo({
+    top: 0,
+    left: 0,
+    behavior: 'smooth',
+  });
+});

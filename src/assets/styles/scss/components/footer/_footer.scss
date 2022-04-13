@@ -3,6 +3,8 @@
   background-image: url(../images/sun.png);
   background-position: center;
   background-repeat: no-repeat;
+  background-color: #f2f7fa;
+  position: relative;
 
   &__top {
     @include flexBox($direction:false, $justify: space-between, $align:flex-start, $wrap:nowrap);
@@ -68,7 +70,6 @@
       display: flex;
       align-items: center;
       border: solid 3px #fcf3e3;
-      // box-shadow: 0 5px 20px -5px rgba(0, 0, 0, 0.1);
 
       img {
         width: 18px;
@@ -91,5 +92,22 @@
   p {
     color: $link;
     font-size: 15px;
+  }
+
+  .scroll-top {
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    right: 125px;
+    top: -28px;
+    cursor: pointer;
+
+    @media screen and (max-width: 930px)  {
+    right: 29px;
+    }
+
+    @media screen and (max-width: 560px)  {
+      right: 5px;
+      }
   }
 }
