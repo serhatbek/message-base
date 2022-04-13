@@ -1,6 +1,7 @@
 .custom-select {
   width: 215px; 
   position: relative;
+  margin-bottom: 8px;
   
   select {
   width: 100%;
@@ -41,4 +42,14 @@
     line-height: 1.35;
     color: $text;
   }
+}
+
+.select-wrapper {
+  text-align: center;
+}
+
+.select-valid-date {
+  font-size: 13px;
+  line-height: 1.46;
+  color: $text2;
 }

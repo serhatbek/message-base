@@ -12,7 +12,8 @@
     transition: all .2s ease-in-out;
   }
 
-  &__item::after {
+  &__item::after,
+  &__item.current::after {
     content: "";
     @include bg-cover;
     background-image: url(../images/path.png);
@@ -45,9 +46,14 @@
     transition: all .2s ease-in-out;
   }
 
-  &__item:hover .main-nav__link {
+  &__item:hover .main-nav__link,
+  &__item.current .main-nav__link {
     color: $white;
     background-image: url(../images/rectangle.png);
     @include bg-cover;
+  }
+
+  &__item.current::after {
+    visibility: visible;
   }
 }
