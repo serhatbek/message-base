@@ -1,5 +1,11 @@
 .section-header {
+  position: relative;
   height: 148px;
+
+  @media screen and (max-width: 1060px)  {
+    height: 100px;
+  }
+
   .container {
     height: 100%;
     box-shadow: 0 50px 50px -55px rgba(0, 0, 0, 0.05);
@@ -15,6 +21,18 @@
 
     @media screen and (max-width: 630px)  {
     max-width: 141px;
+    }
+  }
+
+  .mobileMenu {
+    width: 24px;
+    margin-right: 25px;
+
+    &__open {
+    }
+
+    &__close {
+      display: none;
     }
   }
 }

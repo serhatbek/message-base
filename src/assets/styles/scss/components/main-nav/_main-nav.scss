@@ -1,8 +1,25 @@
 .main-nav {
   @include flexBox($direction:false, $justify: space-between, $align:center, $wrap:nowrap);
-  
+
+  @media screen and (max-width: 1060px)  {
+    // display: none;
+    position: fixed;
+    top: 100px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: $white;
+    padding: 0 20px;
+    @include flexBox($direction:column, $justify:flex-start, $align:flex-start, $wrap:nowrap);
+  }
+
   &__list {
     @include flexBox($direction:false, $justify: space-between, $align:center, $wrap:nowrap);
+
+    @media screen and (max-width: 1060px)  {
+      order: 1;
+      @include flexBox($direction:column, $justify:flex-start, $align:flex-start, $wrap:nowrap);
+    }
 
     &__item {
       box-sizing: border-box;

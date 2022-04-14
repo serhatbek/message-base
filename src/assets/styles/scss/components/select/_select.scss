@@ -1,6 +1,13 @@
 .select {
   position: relative;
   @include flexBox($direction:column, $justify: center, $align:center, $wrap:nowrap);
+
+  @media screen and (max-width: 1060px)  {
+    width: 100%;
+    padding: 30px 0 10px 0;
+    border-top: 1px solid $border1;
+    @include flexBox($direction:row, $justify:space-between, $align:flex-end, $wrap:nowrap);
+  }
   
   &__btn {
     width: 215px;
@@ -9,6 +16,11 @@
     padding: 10px 10px 10px 35px;
     cursor: pointer;
     @include flexBox($direction:false, $justify: space-between, $align:center, $wrap:nowrap);
+
+    @media screen and (max-width: 1060px)  {
+      border: 0;
+      padding: 0;
+    }
 
     &__desc {
       & p:first-child {
@@ -22,12 +34,20 @@
         color: $dark-sky-blue;
         font-size: 15px;
         font-weight: bold;
+
+        @media screen and (max-width: 1060px)  {
+          color: $text;
+        }
       }
     }
 
     &__icon {
       width: 40px;
       @include flexBox($direction:false, $justify: center, $align:center, $wrap:nowrap);
+
+      @media screen and (max-width: 1060px)  {
+        display: none;
+      }
 
       img {
         width: 12px;
