@@ -51,3 +51,34 @@ const selectBtn = document.querySelector('.select__btn');
 selectBtn.addEventListener('click', () => {
   selectMenu.classList.toggle('select--visible');
 });
+
+// =========================
+
+// Nav=> .js-openMenu Body=> .js-overflowHidden
+const menuBtns = document.querySelector('.mobileMenu');
+const openMenuBtn = document.querySelector('.mobileMenu__open');
+const closeMenuBtn = document.querySelector('.mobileMenu__close');
+const resNav = document.querySelector('.main-nav');
+
+openMenuBtn.addEventListener('click', openMobileMenu);
+closeMenuBtn.addEventListener('click', closeMobileMenu);
+
+function openMobileMenu() {
+  resNav.classList.add('js-openMenu');
+  menuBtns.classList.add('js-openMenu');
+  body.classList.add('js-overflowHidden');
+}
+
+function closeMobileMenu() {
+  resNav.classList.remove('js-openMenu');
+  menuBtns.classList.remove('js-openMenu');
+  body.classList.remove('js-overflowHidden');
+}
+
+let mediaLarge = window.matchMedia('(min-width: 1060px)').matches;
+
+window.addEventListener('resize', () => {
+  if (!mediaLarge && resNav.classList.contains('js-openMenu')) {
+    closeMobileMenu();
+  }
+});

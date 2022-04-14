@@ -27,12 +27,23 @@
   .mobileMenu {
     width: 24px;
     margin-right: 25px;
-
-    &__open {
+    display: none;
+    
+    @media screen and (max-width: 1060px)  {
+      display: block;
+      cursor: pointer;
     }
-
+    
     &__close {
       display: none;
+    }
+
+    &.js-openMenu .mobileMenu__open  {
+      display: none;
+    }
+
+    &.js-openMenu .mobileMenu__close  {
+      display: block;
     }
   }
 }
