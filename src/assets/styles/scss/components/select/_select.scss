@@ -1,60 +1,71 @@
-.custom-select {
-  width: 215px; 
+.select {
   position: relative;
-  margin-bottom: 8px;
+  @include flexBox($direction:column, $justify: center, $align:center, $wrap:nowrap);
   
-  select {
-    width: 100%;
-    height: 60px;
+  &__btn {
+    width: 215px;
     border-radius: 10px;
     border: solid 1px $border1;
-    padding: 8px 14px;
-    font-size: 17px;
-    font-weight: bold;
-    line-height: 1.35;
-    color: $text;
-    appearance: none;
-    line-height: 1.07;
+    padding: 10px 10px 10px 35px;
     cursor: pointer;
+    @include flexBox($direction:false, $justify: space-between, $align:center, $wrap:nowrap);
 
-    option {
-      color: $dark-sky-blue;
+    &__desc {
+      & p:first-child {
+        font-size: 17px;
+        font-weight: bold;
+        line-height: 1.35;
+        color: $text;
+      }
+
+      & p:last-child {
+        color: $dark-sky-blue;
+        font-size: 15px;
+        font-weight: bold;
+      }
+    }
+
+    &__icon {
+      width: 40px;
+      @include flexBox($direction:false, $justify: center, $align:center, $wrap:nowrap);
+
+      img {
+        width: 12px;
+        transition: all .3s ease;
+      }
     }
   }
 
-  select:focus {
-    border-radius: 10px;
-    border: solid 1px $border1;
+  &__valid-date {
+    font-size: 13px;
+    line-height: 1.46;
+    color: $text2;
+    margin-top: 6px;
   }
 
-  &::after {
-    content: "";
-    @include bg-cover;
-    background-image: url(../images/icons-12.png);
-    background-size: 12px 12px;
-    max-width: 12px;
-    width: 100%;
-    height: 12px;
+  &__list {
+    @extend .select__btn;
+    display: none;
+    background-color: $white;
     position: absolute;
-    right: 14px;
-    top: 24px;
-    pointer-events: none;
+    top: 72px;
+
+    &__link {
+      display: inline-block;
+      color: $text;
+      padding:20px 0;
+    }
+
+    &__item:not(:last-child) {
+      border-bottom: solid 1px $border1;
+    }
   }
 
-  &__title {
-    font-size: 17px;
-    font-weight: bold;
-    line-height: 1.35;
-    color: $text;
+  &--visible .select__btn__icon img {
+    transform: rotate(180deg);
   }
-}
 
-.select-wrapper {
-  text-align: center;
-}
-
-.select-valid-date {
-  font-size: 13px;
-  line-height: 1.46;
-  color: $text2;
+  &--visible .select__list {
+    display: block;
+  }
 }

@@ -42,3 +42,12 @@ function closeModal() {
   iysModal.classList.remove('js-open-modal');
   body.classList.remove('js-overflowHidden');
 }
+
+// =========================
+
+const selectMenu = document.querySelector('.select');
+const selectBtn = document.querySelector('.select__btn');
+
+selectBtn.addEventListener('click', () => {
+  selectMenu.classList.toggle('select--visible');
+});
