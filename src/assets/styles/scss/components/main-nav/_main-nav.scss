@@ -1,65 +1,65 @@
 .main-nav {
   &__list {
-    @include flexBox($direction:false, $justify: center, $align:center, $wrap:nowrap)
-  }
-
-  &__item {
-    box-sizing: border-box;
-    width: 190px;
-    @include flexBox($direction:column, $justify: center, $align:center, $wrap:nowrap);
-    position: relative;
-    padding-top: 48px;
-    transition: all .2s ease-in-out;
-  }
-
-  &__item::after,
-  &__item.current::after {
-    content: "";
-    @include bg-cover;
-    background-image: url(../images/path.png);
-    width: 184px;
-    height: 8px;
-    background-size: 184px 8px;
-    display: block;
-    visibility: hidden;
-  }
-
-  &__item:hover:after {
-    visibility: visible;
-  }
-  
-  &__item.current::after {
-    visibility: visible;
-  }
-
-  &__icon {
-    width: 48px;
-    z-index: 3;
-    position: absolute;
-    top: 0;
-    left: 50%;
-    margin-left: -24px;
-    transition: all .3s ease-in-out;
-  }
-
-  &__item:hover &__icon,
-  &__item.current &__icon {
-    top: 6px;
-  }
-
-  &__link {
-    width: 100%;
-    height: 44px;
-    color: $link;
-    border-radius: 22px;
     @include flexBox($direction:false, $justify: center, $align:center, $wrap:nowrap);
-    transition: all .2s ease-in-out;
-  }
 
-  &__item:hover .main-nav__link,
-  &__item.current .main-nav__link {
-    color: $white;
-    background-image: url(../images/rectangle.png);
-    @include bg-cover;
+    &__item {
+      box-sizing: border-box;
+      width: 190px;
+      @include flexBox($direction:column, $justify: center, $align:center, $wrap:nowrap);
+      position: relative;
+      padding-top: 48px;
+      transition: all .2s ease-in-out;
+    }
+  
+    &__item::after,
+    &__item.current::after {
+      content: "";
+      @include bg-cover;
+      background-image: url(../images/path.png);
+      width: 184px;
+      height: 8px;
+      background-size: 184px 8px;
+      display: block;
+      visibility: hidden;
+    }
+  
+    &__item:hover:after {
+      visibility: visible;
+    }
+    
+    &__item.current::after {
+      visibility: visible;
+    }
+  
+    &__icon {
+      width: 48px;
+      z-index: 3;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      margin-left: -24px;
+      transition: all .3s ease-in-out;
+    }
+  
+    &__item:hover &__list__icon,
+    &__item.current &__list__icon {
+      top: 6px;
+    }
+  
+    &__link {
+      width: 100%;
+      height: 44px;
+      color: $link;
+      border-radius: 22px;
+      @include flexBox($direction:false, $justify: center, $align:center, $wrap:nowrap);
+      transition: all .2s ease-in-out;
+    }
+  
+    &__item:hover .main-nav__list__link,
+    &__item.current .main-nav__list__link {
+      color: $white;
+      background-image: url(../images/rectangle.png);
+      @include bg-cover;
+    }
   }
 }

@@ -1,4 +1,4 @@
-.header {
+.section-header {
   height: 148px;
   .container {
     height: 100%;
@@ -6,7 +6,7 @@
     @include flexBox($direction: false, $justify: space-between, $align:center, $wrap: nowrap )
   }
 
-  .logo {
+  &__logo {
     max-width: 200px;
 
     @media screen and (max-width: 1060px)  {
