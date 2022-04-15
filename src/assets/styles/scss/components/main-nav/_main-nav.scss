@@ -18,6 +18,7 @@
   }
 
   &__list {
+    margin-top: 40px;
     @include flexBox($direction:false, $justify: space-between, $align:center, $wrap:nowrap);
 
     @media screen and (max-width: 1060px)  {
@@ -27,6 +28,7 @@
     }
 
     &__item {
+      position: relative;
       box-sizing: border-box;
       width: 190px;
       @include flexBox($direction:column, $justify: center, $align:center, $wrap:nowrap);
@@ -41,30 +43,12 @@
         padding: 4px 0;
       }
 
-      img {
-        width: 48px;
-        transition: all .3s ease-in-out;
-
-        @media screen and (max-width: 1060px)  {
-          display: none;
-        }
-
-        &:nth-of-type(2) {
-          display: none;
-          width: 14px;
-          height: 14px;
-
-          @media screen and (max-width: 1060px)  {
-            display: block;
-          }
-        }
-      }
 
       a {
         height: 44px;
         color: $link;
         border-radius: 22px;
-        @include flexBox($direction:false, $justify: center, $align:center, $wrap:nowrap);
+        @include flexBox($direction:column, $justify: center, $align:center, $wrap:nowrap);
         transition: all .2s ease-in-out;
 
         &:hover {
@@ -74,6 +58,28 @@
         @media screen and (max-width: 1060px)  {
           color: $text;
           font-weight: 900;
+        }
+
+        img {
+          width: 48px;
+          margin-bottom: 14px;
+          position: absolute;
+          top: -48px;
+          transition: all .3s ease-in-out;
+  
+          @media screen and (max-width: 1060px)  {
+            display: none;
+          }
+        }
+      }
+
+      & > img {
+        display: none;
+        width: 14px;
+        height: 14px;
+
+        @media screen and (max-width: 1060px)  {
+          display: block;
         }
       }
     }
