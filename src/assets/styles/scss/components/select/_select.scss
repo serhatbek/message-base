@@ -14,7 +14,7 @@
     width: 215px;
     border-radius: 10px;
     border: solid 1px $border1;
-    padding: 10px 10px 10px 35px;
+    padding: 10px;
     cursor: pointer;
     @include flexBox($direction:false, $justify: space-between, $align:center, $wrap:nowrap);
 
@@ -70,6 +70,8 @@
     background-color: $white;
     position: absolute;
     top: 72px;
+    padding-top: 0;
+    padding-bottom: 0;
 
     &__link {
       display: inline-block;

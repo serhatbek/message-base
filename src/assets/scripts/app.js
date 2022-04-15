@@ -47,9 +47,16 @@ function closeModal() {
 
 const selectMenu = document.querySelector('.select');
 const selectBtn = document.querySelector('.select__btn');
+const selectListItem = document.querySelector('.select__list__item');
 
 selectBtn.addEventListener('click', () => {
   selectMenu.classList.toggle('select--visible');
+});
+
+window.addEventListener('click', (e) => {
+  if (e.target !== selectBtn && e.target !== selectListItem) {
+    selectMenu.classList.remove('select--visible');
+  }
 });
 
 // =========================
