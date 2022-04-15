@@ -75,10 +75,10 @@ function closeMobileMenu() {
   body.classList.remove('js-overflowHidden');
 }
 
-let mediaLarge = window.matchMedia('(min-width: 1060px)').matches;
+// let mediaLarge = window.matchMedia('(min-width: 1060px)').matches;
 
-window.addEventListener('resize', () => {
-  if (!mediaLarge && resNav.classList.contains('js-openMenu')) {
-    closeMobileMenu();
-  }
-});
+// window.addEventListener('resize', () => {
+//   if (!mediaLarge && resNav.classList.contains('js-openMenu')) {
+//     closeMobileMenu();
+//   }
+// });
