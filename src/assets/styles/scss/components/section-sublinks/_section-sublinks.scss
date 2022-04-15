@@ -1,0 +1,21 @@
+.section-sublinks {
+  height: 65px;
+  @include flexBox($direction:false, $justify: center, $align:center, $wrap:nowrap);
+
+  @media screen and (max-width: 1060px)  {
+    display: none;
+  }
+
+  &__btn {
+    width: 160px;
+    font-size: 17px;
+    font-weight: bold;
+    line-height: 1.47;
+    color: $text;
+    cursor: pointer;
+  }
+
+  &__btn--active {
+    color: $orange;
+  }
+}
