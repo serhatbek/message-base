@@ -82,10 +82,12 @@ function closeMobileMenu() {
   body.classList.remove('js-overflowHidden');
 }
 
-// let mediaLarge = window.matchMedia('(min-width: 1060px)').matches;
+const mediaLarge = window.matchMedia('(min-width: 1060px)');
 
-// window.addEventListener('resize', () => {
-//   if (!mediaLarge && resNav.classList.contains('js-openMenu')) {
-//     closeMobileMenu();
-//   }
-// });
+window.addEventListener('DOMContentLoaded', init);
+
+function init() {
+  if (mediaLarge.matches) {
+    closeMobileMenu();
+  }
+}
