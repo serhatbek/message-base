@@ -2,7 +2,14 @@
   padding: 36px 0;
   @include flexBox($direction:false, $justify: center, $align:center, $wrap:nowrap);
 
-  .container {
+.container {
+  @include flexBox($direction:false, $justify: center, $align:center, $wrap:nowrap);
+  @media screen and (max-width: 638px)  {
+    padding: 0;
+  }
+}
+
+  &__container {
     color: $white;
     max-width: 1030px;
     border-radius: 10;  
