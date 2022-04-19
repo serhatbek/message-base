@@ -1,0 +1,45 @@
+.section-heroSwiper {
+  background-color: $br;
+  .hero {
+    padding: 30px 0;
+    @include flexBox($direction: false, $justify: space-between, $align:center, $wrap: nowrap );
+    position: relative;
+
+    @media screen and (max-width: 1020px)  {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    &__content {
+      max-width: 450px;
+
+      @media screen and (max-width: 990px)  {
+        order: 2;
+        text-align: center;
+      }
+
+      &__title {
+        font-size: 41px;
+        font-weight: 800;
+        line-height: 1.22;
+        color: $text;
+        margin-bottom: 20px;
+      }
+
+      &__desc {
+        font-size: 17px;
+        line-height: 1.47;
+        color: $link;
+        margin-bottom: 25px;
+      }
+
+      &__btn {
+        margin-bottom: 50px;
+      }
+    }
+  }
+
+  .swiper-pagination {
+    background-color: black;
+  }
+}

@@ -91,3 +91,22 @@ function init() {
     closeMobileMenu();
   }
 }
+
+// ==================
+import Swiper, { Pagination, Autoplay } from 'swiper';
+import 'swiper/swiper-bundle.css';
+
+const heroSwiper = new Swiper('.heroSwiper', {
+  loop: true,
+  spaceBetween: 600,
+  modules: [Pagination, Autoplay],
+  autoplay: {
+    delay: 4000,
+    disableOnInteraction: false,
+  },
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+    type: 'bullets',
+  },
+});
