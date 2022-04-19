@@ -3,10 +3,16 @@
     // @include flexBox($direction: column, $justify: center, $align:center, $wrap: nowrap );
 
     > div {
+      padding: 39px 0;
       @include flexBox($direction: false, $justify: space-between, $align:center, $wrap: nowrap );
+      position: relative;
 
       @media screen and (max-width: 1020px)  {
         @include flexBox($direction: column, $justify: center, $align:center, $wrap: nowrap );
+      }
+
+      @media screen and (max-width: 620px)  {
+        padding: 0;
       }
     }
 
@@ -20,13 +26,31 @@
       justify-content: flex-end;
     }
 
+    > div:nth-child(2) {
+      margin-bottom: 50px;
+    }
+
     &__content {
       text-align: right;
       max-width: 470px;
 
+      @media screen and (max-width: 1020px)  {
+        text-align: center;
+        order: 2;
+      }
+
       &--first {
         text-align: left;
         order: 2;
+
+        @media screen and (max-width: 1020px)  {
+          text-align: center;
+        }
+      }
+
+      &__plus-icon {
+        width: 19px;
+        margin-bottom: 39px;
       }
 
       &__title {
@@ -35,20 +59,124 @@
         line-height: 1.22;
         color: $text;
         margin-bottom: 16px;
+
+        @media screen and (max-width: 520px)  {
+          font-size: 25px;
+        }
       }
 
       &__desc {
         font-size: 17px;
         line-height: 1.47;
         color: $link;
-        margin-bottom: 36px;
+        margin-bottom: 40px;
+
+        @media screen and (max-width: 1020px)  {
+          margin-bottom: 20px;
+        }
+
+        @media screen and (max-width: 520px)  {
+          font-size: 13px;
+        }
+      }
+
+      &__btn {
+        @media screen and (max-width: 1020px)  {
+          width: 100%;
+          margin-bottom: 40px;
+          box-shadow: 0 10px 20px -5px rgba(0, 90, 135, 0.25);
+        }
+
+        @media screen and (max-width: 520px)  {
+          font-size: 15px;
+        }
       }
     }
 
     &__img{
       &--mr {
         margin-right: 38px;
+        @media screen and (max-width: 1020px)  {
+          margin-right: 0;
+        }
       }
+    }
+  }
+
+  &__triangle {
+    max-width: 199px;
+    position: absolute;
+    right: 0;
+    top: -84px;
+    z-index: -1;
+  }
+
+  &__dashes-hor {
+    max-width: 103px;
+    position: absolute;
+    right: 226px;
+    top: 0;
+  }
+
+  &__arrow-right {
+    max-width: 76px;
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+
+    @media screen and (max-width: 620px)  {
+      width: 38px;
+    }
+  }
+
+  &__squares {
+    max-width: 159px;
+    position: absolute;
+    right: 0;
+    top: -44px;
+    z-index: -1;
+
+    @media screen and (max-width: 620px)  {
+      width: 90px;
+    }
+  }
+
+  &__2-lines {
+    max-width: 31px;
+    position: absolute;
+    bottom: 90px;
+    right: 329px;
+
+    @media screen and (max-width: 1020px)  {
+    width: 16px;
+    bottom: 20px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    }
+  }
+
+  &__arrow-down {
+    max-width: 41px;
+    position: absolute;
+    right: 0;
+    top: -100px;
+    z-index: -1;
+
+    @media screen and (max-width: 620px)  {
+      width: 21px;
+      top: 0;
+    }
+  }
+
+  &__dashed-ver {
+    width: 14px;
+    position: absolute;
+    left: 0;
+    top: 60%;
+
+    @media screen and (max-width: 620px)  {
+      width: 7px;
+      top: 6%;
     }
   }
 }
