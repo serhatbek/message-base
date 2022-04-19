@@ -15,4 +15,10 @@
     background-color: $white;
     border: 2px solid $dark-sky-blue;
   }
+
+  &__transparent {
+    border: 2px solid $white;
+    font-weight: 700;
+    padding: 14px 22px;
+  }
 }

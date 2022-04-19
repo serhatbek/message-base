@@ -6,6 +6,10 @@
     height: 100px;
   }
 
+  &__gradient-blue {
+    background: linear-gradient(240deg, rgba(0,124,224,1) 1%, rgba(32,203,252,1) 100%);
+  }
+
   .container {
     height: 100%;
     box-shadow: 0 50px 50px -55px rgba(0, 0, 0, 0.05);
