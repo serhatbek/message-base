@@ -1,0 +1,54 @@
+.section-options {
+  &__box {
+    // @include flexBox($direction: column, $justify: center, $align:center, $wrap: nowrap );
+
+    > div {
+      @include flexBox($direction: false, $justify: space-between, $align:center, $wrap: nowrap );
+
+      @media screen and (max-width: 1020px)  {
+        @include flexBox($direction: column, $justify: center, $align:center, $wrap: nowrap );
+      }
+    }
+
+    > div:first-child,
+    > div:nth-child(3) {
+      justify-content: flex-start;
+    }
+
+    > div:nth-child(2),
+    > div:nth-child(4) {
+      justify-content: flex-end;
+    }
+
+    &__content {
+      text-align: right;
+      max-width: 470px;
+
+      &--first {
+        text-align: left;
+        order: 2;
+      }
+
+      &__title {
+        font-size: 41px;
+        font-weight: 800;
+        line-height: 1.22;
+        color: $text;
+        margin-bottom: 16px;
+      }
+
+      &__desc {
+        font-size: 17px;
+        line-height: 1.47;
+        color: $link;
+        margin-bottom: 36px;
+      }
+    }
+
+    &__img{
+      &--mr {
+        margin-right: 38px;
+      }
+    }
+  }
+}

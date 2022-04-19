@@ -93,13 +93,13 @@ function init() {
 }
 
 // ==================
-import Swiper, { Pagination, Autoplay } from 'swiper';
+import Swiper, { Navigation, Pagination, Autoplay } from 'swiper';
 import 'swiper/swiper-bundle.css';
 
 const heroSwiper = new Swiper('.heroSwiper', {
   loop: true,
   spaceBetween: 600,
-  modules: [Pagination, Autoplay],
+  modules: [Pagination, Navigation, Autoplay],
   autoplay: {
     delay: 4000,
     disableOnInteraction: false,

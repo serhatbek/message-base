@@ -1,5 +1,8 @@
 .section-heroSwiper {
   background-color: $br;
+  position: relative;
+  margin-bottom: 159px;
+
   .hero {
     padding: 30px 0;
     @include flexBox($direction: false, $justify: space-between, $align:center, $wrap: nowrap );
@@ -13,7 +16,7 @@
     &__content {
       max-width: 450px;
 
-      @media screen and (max-width: 990px)  {
+      @media screen and (max-width: 1020px)  {
         order: 2;
         text-align: center;
       }
@@ -39,7 +42,31 @@
     }
   }
 
+  &__image {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 47px;
+  }
+
   .swiper-pagination {
-    background-color: black;
+    width: 74px;
+    height: 45px;
+    background-image: url(../images/slide-rectangle.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    bottom: 64px;
+    left: 30px;
+  }
+
+  .swiper-pagination-bullet {
+    cursor: pointer;
+    background-color: $white !important;
+  }
+
+  .swiper-pagination-bullet-active {
+    background-color: #7bb3d1 !important;
   }
 }
