@@ -33,17 +33,14 @@
     }
   }
 
-  .mobileMenu {
+  .messages-page.mobileMenu, 
+  .howitworks-page.mobileMenu {
     width: 24px;
     margin-right: 25px;
     display: none;
     cursor: pointer;
     
-    @media screen and (max-width: 1060px)  {
-      display: block;
-    }
-    
-    &__close {
+    & .mobileMenu__close {
       display: none;
     }
 
@@ -52,6 +49,18 @@
     }
 
     &.js-openMenu .mobileMenu__close  {
+      display: block;
+    }
+  }
+
+  .messages-page.mobileMenu {
+    @media screen and (max-width: 1060px)  {
+      display: block;
+    }
+  }
+
+  .howitworks-page.mobileMenu {
+    @media screen and (max-width: 790px)  {
       display: block;
     }
   }
