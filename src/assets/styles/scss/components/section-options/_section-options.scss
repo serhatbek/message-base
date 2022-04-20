@@ -1,4 +1,10 @@
 .section-options {
+  margin-bottom: 100px;
+
+  @media screen and (max-width: 520px)  {
+    margin-bottom: 0;
+  }
+  
   &__box {
     // @include flexBox($direction: column, $justify: center, $align:center, $wrap: nowrap );
 
