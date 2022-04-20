@@ -144,43 +144,5 @@
       background-image: url(../images/rectangle.png);
       @include bg-cover;
     }
-
-    // &__mobile {
-    //   display: none;
-    //   width: 100%;
-    //   background-color: $border2;
-
-    //   @media screen and (max-width: 1060px)  {
-    //     display: block;
-    //   }
-
-    //   & .main-nav__list__item {
-    //     font-size: 15px;
-        
-    //     a {
-    //       font-weight: 500;
-    //     }
-
-    //     img {
-    //       display: none;
-    //       width: 14px;
-    //       height: 14px;
-
-    //       @media screen and (max-width: 1060px)  {
-    //         display: block;
-    //       }
-    //     }
-
-    //     &--light {
-    //       background-color: $white;
-    //       font-weight: bold;
-
-    //       a {
-    //         font-size: 16px;
-    //         font-weight: 800;
-    //       }
-    //     }
-    //   }
-    // }
   }
 }

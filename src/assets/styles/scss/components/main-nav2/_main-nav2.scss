@@ -1,26 +1,95 @@
 .main-nav2 {
+  @media screen and (max-width: 790px)  {
+    position: fixed;
+    width: 100%;
+    top: 100px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: $white;
+    padding: 0 30px;
+    z-index: 2;
+    @include flexBox($direction:column, $justify:flex-start, $align:center, $wrap:nowrap);
+    display: none;
+  }
+
+  &.js-openMenu {
+    display: flex;
+  }
   
   &__list {
     @include flexBox($direction: false, $justify: space-between, $align:center, $wrap: nowrap );
+
+    @media screen and (max-width: 790px)  {
+      width: 100%;
+      text-align: center;
+      @include flexBox($direction:column, $justify:flex-start, $align:flex-start, $wrap:nowrap);
+    }
     
     &__item {
       font-size: 15px;
       font-weight: 400;
 
+      @media screen and (max-width: 790px)  {
+        width: 100%;
+      }
+
       &:not(:first-child) {
         margin-left: 30px;
+
+        @media screen and (max-width: 790px)  {
+          margin-left: 0;
+        }
       }
-      
-      a {
-        color: $very-light-blue;
-        line-height: 1.27;
+
+      &:first-child {
+        @media screen and (max-width: 790px)  {
+          margin: 30px 0 15px;
+        }
+      }
+
+      &:nth-child(2),
+      &:nth-child(2) {
+        @media screen and (max-width: 790px)  {
+          margin-bottom: 15px;
+        }
+      }
+
+      &:nth-child(3) {
+        @media screen and (max-width: 790px)  {
+          margin-bottom: 80px;
+        }
       }
     }
 
-    &__item.current {
-      a {
+    &__item.current .main-nav2__list__link {
         color: $white;
         font-weight: 600;
+        @media screen and (max-width: 790px)  {
+          color: $text;
+      }
+    }
+
+    &__link {
+      color: $very-light-blue;
+      line-height: 1.27;
+
+      @media screen and (max-width: 790px)  {
+        width: 100%;
+        color: $text;
+        font-weight: 700;
+        font-size: 17px;
+        padding: 15px 0 30px;
+        border-bottom: 1px solid $border2;
+        @include flexBox($direction: false, $justify: space-between, $align:center, $wrap: nowrap );
+      }
+
+      img {
+        display: none;
+        @media screen and (max-width: 790px)  {
+          display: block;
+          width: 11px;
+      }
       }
     }
   }

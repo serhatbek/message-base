@@ -1,18 +1,3 @@
-const tabButtons = document.querySelectorAll('.section-tabs__btn');
-const tabItems = document.querySelectorAll('.section-tabs__content');
-
-tabButtons.forEach((btn, index) => {
-  btn.addEventListener('click', () => {
-    tabButtons.forEach((btn) => btn.classList.remove('js-active'));
-    btn.classList.add('js-active');
-
-    tabItems.forEach((item) => item.classList.remove('js-active'));
-    tabItems[index].classList.add('js-active');
-  });
-});
-
-// ==============
-
 const scrollTopBtn = document.querySelector('.scroll-top');
 
 scrollTopBtn.addEventListener('click', () => {
@@ -25,61 +10,86 @@ scrollTopBtn.addEventListener('click', () => {
 
 // ==============
 
-const openModalBtn = document.querySelector('.js-iysModalBtn');
-const closeModalBtn = document.querySelector('.iys-modal__close');
 const body = document.querySelector('body');
 const iysModal = document.querySelector('.iys-modal');
 
-openModalBtn.addEventListener('click', () => openModal());
-closeModalBtn.addEventListener('click', () => closeModal());
+if (iysModal) {
+  const openModalBtn = document.querySelector('.js-iysModalBtn');
+  const closeModalBtn = document.querySelector('.iys-modal__close');
 
-function openModal() {
-  iysModal.classList.add('js-open-modal');
-  body.classList.add('js-overflowHidden');
+  openModalBtn.addEventListener('click', () => openModal());
+  closeModalBtn.addEventListener('click', () => closeModal());
+
+  function openModal() {
+    iysModal.classList.add('js-open-modal');
+    body.classList.add('js-overflowHidden');
+  }
+
+  function closeModal() {
+    iysModal.classList.remove('js-open-modal');
+    body.classList.remove('js-overflowHidden');
+  }
 }
-
-function closeModal() {
-  iysModal.classList.remove('js-open-modal');
-  body.classList.remove('js-overflowHidden');
-}
-
 // =========================
 
 const selectMenu = document.querySelector('.select');
-const selectBtn = document.querySelector('.select__btn');
-const selectListItem = document.querySelector('.select__list__item');
 
-selectBtn.addEventListener('click', () => {
-  selectMenu.classList.toggle('select--visible');
-});
+if (selectMenu) {
+  const selectBtn = document.querySelector('.select__btn');
+  const selectListItem = document.querySelector('.select__list__item');
 
-window.addEventListener('click', (e) => {
-  if (e.target !== selectBtn && e.target !== selectListItem) {
-    selectMenu.classList.remove('select--visible');
-  }
-});
+  selectBtn.addEventListener('click', () => {
+    selectMenu.classList.toggle('select--visible');
+  });
+
+  window.addEventListener('click', (e) => {
+    if (e.target !== selectBtn && e.target !== selectListItem) {
+      selectMenu.classList.remove('select--visible');
+    }
+  });
+}
 
 // =========================
 
-// Nav=> .js-openMenu Body=> .js-overflowHidden
 const menuBtns = document.querySelector('.mobileMenu');
 const openMenuBtn = document.querySelector('.mobileMenu__open');
 const closeMenuBtn = document.querySelector('.mobileMenu__close');
 const resNav = document.querySelector('.main-nav');
+const resNav2 = document.querySelector('.main-nav2');
 
 openMenuBtn.addEventListener('click', openMobileMenu);
 closeMenuBtn.addEventListener('click', closeMobileMenu);
 
 function openMobileMenu() {
-  resNav.classList.add('js-openMenu');
+  if (resNav2) {
+    let nav = resNav2;
+    nav.classList.add('js-openMenu');
+  }
+
+  if (resNav) {
+    let nav = resNav;
+    nav.classList.add('js-openMenu');
+  }
+
   menuBtns.classList.add('js-openMenu');
   body.classList.add('js-overflowHidden');
+  console.log('open');
 }
 
 function closeMobileMenu() {
-  resNav.classList.remove('js-openMenu');
+  if (resNav) {
+    let nav = resNav;
+    nav.classList.remove('js-openMenu');
+  }
+
+  if (resNav2) {
+    let nav = resNav2;
+    nav.classList.remove('js-openMenu');
+  }
+
   menuBtns.classList.remove('js-openMenu');
   body.classList.remove('js-overflowHidden');
+  console.log('close');
 }
 
 const mediaLarge = window.matchMedia('(min-width: 1060px)');
@@ -91,8 +101,8 @@ function init() {
     closeMobileMenu();
   }
 }
-
 // ==================
+
 import Swiper, { Navigation, Pagination, Autoplay } from 'swiper';
 import 'swiper/swiper-bundle.css';
 

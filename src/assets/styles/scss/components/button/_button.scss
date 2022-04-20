@@ -20,6 +20,12 @@
     border: 2px solid $white;
     font-weight: 700;
     padding: 14px 22px;
+    color: $white;
+
+    @media screen and (max-width: 790px)  {
+      color: $text;
+    border: 2px solid $text;
+    }
   }
 
   &--wide {
