@@ -38,7 +38,8 @@ if (selectMenu) {
   const selectBtn = document.querySelector('.select__btn');
   const selectListItem = document.querySelector('.select__list__item');
 
-  selectBtn.addEventListener('click', () => {
+  selectBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
     selectMenu.classList.toggle('select--visible');
   });
 
@@ -106,7 +107,7 @@ function init() {
 import Swiper, { Navigation, Pagination, Autoplay } from 'swiper';
 import 'swiper/swiper-bundle.css';
 
-const heroSwiper = new Swiper('.heroSwiper', {
+const heroSwiper = new Swiper('.js-hero-swiper', {
   loop: true,
   spaceBetween: 600,
   modules: [Pagination, Navigation, Autoplay],

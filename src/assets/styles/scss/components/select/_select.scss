@@ -24,14 +24,14 @@
     }
 
     &__desc {
-      & p:first-child {
+      & span:first-child {
         font-size: 17px;
         font-weight: bold;
         line-height: 1.35;
         color: $text;
       }
 
-      & p:last-child {
+      & span:last-child {
         color: $dark-sky-blue;
         font-size: 15px;
         font-weight: bold;
@@ -69,7 +69,7 @@
     display: none;
     background-color: $white;
     position: absolute;
-    top: 72px;
+    top: 68px;
     padding-top: 0;
     padding-bottom: 0%;
 
