@@ -15,9 +15,7 @@
       }
     }
 
-  &__img {
-    max-width: 575px;
-
+  figure {
     @media screen and (max-width: 996px)  {
       order: 2;
     }
