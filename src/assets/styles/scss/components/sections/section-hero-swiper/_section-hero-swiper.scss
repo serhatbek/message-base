@@ -18,7 +18,7 @@
       justify-content: center;
     }
 
-    &__content {
+    > div {
       max-width: 450px;
 
       @media screen and (max-width: 1020px)  {
@@ -26,7 +26,7 @@
         text-align: center;
       }
 
-      &__title {
+      > h1 {
         font-size: 41px;
         font-weight: 800;
         line-height: 1.22;
@@ -38,7 +38,7 @@
         }
       }
 
-      &__desc {
+      > p {
         font-size: 17px;
         line-height: 1.47;
         color: $link;
@@ -49,8 +49,8 @@
         }
       }
 
-      &__btn {
-        margin-bottom: 50px;
+      a {
+        margin-bottom: 40px;
       }
     }
   }
