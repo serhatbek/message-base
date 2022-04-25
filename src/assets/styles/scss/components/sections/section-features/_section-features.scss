@@ -1,85 +1,59 @@
 .section-features {
-  
-    .container {
-      border-radius: 10px;
-      box-shadow: inset 0 0 0 2px #f7fafc, inset 0 0 0 3px #edf4f7;
-      @include flexBox($direction:column, $justify: center, $align: center, $wrap:nowrap);
-
+  .container {
       @media screen and (max-width: 768px)  {
       padding: 0 15px;
-      }
     }
+  }
 
-    &__wrapper {
-      width: 100%;
-      text-align: center;
-    }
+  &__box {
+    border-radius: 10px;
+    box-shadow: inset 0 0 0 2px #f7fafc, inset 0 0 0 3px #edf4f7;
 
-    &__heading {
+    h2 {
       font-size: 31px;
       color: $text;
       margin-bottom: 50px;
-      margin-top: 85px;
+      // margin-top: 85px;
       
       @media screen and (max-width: 768px)  {
       font-size: 29px;
       }
     }
 
-  &__box {
-    width: 100%;
-    @include flexBox($direction:row, $justify: space-evenly, $align: center, $wrap:nowrap);
-
-    @media screen and (max-width: 1020px)  {
-      flex-direction: column;
-      }
-
-    & > div {
-      margin-bottom: 83px;
-      @include flexBox($direction:false, $justify: center, $align: center, $wrap:nowrap);
-    }
-
-    &__item {
+    > div {
       text-align: center;
-      @include flexBox($direction:column, $justify: center, $align: center, $wrap:nowrap);
-      
-      &--wide {
-        max-width: 770px;
+      position: relative;
+      padding: 80px 0;
+
+      &:not(:last-child)::after {
+        content: "";
+        max-width: 970px;
+        width: 100%;
+        height: 1px;
+        background-color: $border2;
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        transform: translate(-50%, -50%);
+
+        @media screen and (max-width: 768px)  {
+          max-width: 610px;
+        }
+
+        @media screen and (max-width: 560px)  {
+          max-width: 260px;
+        }
       }
-
-      &--narrow {
-        max-width: 290px;
-        @media screen and (max-width: 1020px)  {
-          max-width: 770px;
-          }
-      }
     }
 
-    &__img {
-      width: 96px;
-      margin-bottom: 20px;
+
+    > div > div {
+      @include flexBox($direction:false, $justify: space-evenly, $align: center, $wrap:false);
+
+      @media screen and (max-width: 1020px)  {
+        flex-direction: column;
+        gap: 39px;
+        }
     }
-
-    &__title {
-    color: $text;
-    font-size: 25px;
-    margin-bottom: 16px;
-
-    @media screen and (max-width: 768px)  {
-    font-size: 20px;
-    }
-  }
-
-    &__desc {
-    color: $text;
-    font-size: 15px;
-    }
-  }
-
-  &__border-bottom {
-    max-width: 970px;
-    width: 100%;
-    height: 1px;
-    background-color: $border2;
   }
 }

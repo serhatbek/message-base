@@ -1,0 +1,35 @@
+.features__card {
+  @include flexBox($direction:column, $justify: center, $align: center, $wrap:false);
+
+  figure {
+    width: 83px;
+    margin-bottom: 20px;
+  }
+
+  h3 {
+    color: $text;
+    font-size: 25px;
+    margin-bottom: 16px;
+
+    @media screen and (max-width: 768px)  {
+    font-size: 20px;
+    }
+  }
+
+  p {
+    color: $text;
+    font-size: 15px;
+  }
+
+  &--narrow {
+    max-width: 290px;
+    @media screen and (max-width: 1020px)  {
+      max-width: 510px;
+    }
+  }
+
+  &--wide {
+    max-width: 770px;
+    margin: 0 auto;
+  }
+}
