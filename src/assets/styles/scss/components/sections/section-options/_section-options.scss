@@ -6,6 +6,35 @@
   }
   
   &__box {
+
+    > div:first-child > div, > div:nth-child(3) > div {
+      text-align: left;
+      order: 2;
+
+      @media screen and (max-width: 1020px)  {
+        text-align: center;
+      }
+    }
+
+    > div:nth-child(2) > div, > div:nth-child(4) > div {
+      @media screen and (max-width: 1020px)  {
+        text-align: center;
+        order: 2;
+      }
+    }
+
+    > div:first-child > figure {
+      margin-right: 38px;
+      @media screen and (max-width: 1020px)  {
+        margin-right: 0;
+      }
+    }
+
+    div:nth-child(3) > div > figure {
+      width: 19px;
+      margin-bottom: 39px;
+    }
+
     > div {
       padding: 39px 0;
       @include flexBox($direction: false, $justify: space-between, $align:center, $wrap: nowrap );
@@ -25,21 +54,6 @@
 
         @media screen and (max-width: 1020px)  {
           text-align: center;
-          order: 2;
-        }
-
-        &--first {
-          text-align: left;
-          order: 2;
-
-          @media screen and (max-width: 1020px)  {
-            text-align: center;
-          }
-        }
-
-        &__plus-icon {
-          width: 19px;
-          margin-bottom: 39px;
         }
 
         h2 {
@@ -69,7 +83,7 @@
           }
         }
 
-        &__btn {
+        a {
           @media screen and (max-width: 1020px)  {
             width: 100%;
             margin-bottom: 40px;
@@ -81,23 +95,6 @@
           }
         }
       }
-
-      > div.section-options__box__content--first {
-        text-align: left;
-        order: 2;
-
-        @media screen and (max-width: 1020px)  {
-          text-align: center;
-        }
-      }
-
-      > figure.section-options__box__img--mr {
-          margin-right: 38px;
-          @media screen and (max-width: 1020px)  {
-            margin-right: 0;
-          }
-        }
-      
     }
 
     > div:first-child,
@@ -112,78 +109,6 @@
 
     > div:nth-child(2) {
       margin-bottom: 50px;
-    }
-
-    // > div {
-    //   text-align: right;
-    //   max-width: 470px;
-
-    //   @media screen and (max-width: 1020px)  {
-    //     text-align: center;
-    //     order: 2;
-    //   }
-
-    //   &--first {
-    //     text-align: left;
-    //     order: 2;
-
-    //     @media screen and (max-width: 1020px)  {
-    //       text-align: center;
-    //     }
-    //   }
-
-    //   &__plus-icon {
-    //     width: 19px;
-    //     margin-bottom: 39px;
-    //   }
-
-    //   &__title {
-    //     font-size: 41px;
-    //     font-weight: 800;
-    //     line-height: 1.22;
-    //     color: $text;
-    //     margin-bottom: 16px;
-
-    //     @media screen and (max-width: 520px)  {
-    //       font-size: 25px;
-    //     }
-    //   }
-
-    //   &__desc {
-    //     font-size: 17px;
-    //     line-height: 1.47;
-    //     color: $link;
-    //     margin-bottom: 40px;
-
-    //     @media screen and (max-width: 1020px)  {
-    //       margin-bottom: 20px;
-    //     }
-
-    //     @media screen and (max-width: 520px)  {
-    //       font-size: 13px;
-    //     }
-    //   }
-
-    //   &__btn {
-    //     @media screen and (max-width: 1020px)  {
-    //       width: 100%;
-    //       margin-bottom: 40px;
-    //       box-shadow: 0 10px 20px -5px rgba(0, 90, 135, 0.25);
-    //     }
-
-    //     @media screen and (max-width: 520px)  {
-    //       font-size: 15px;
-    //     }
-    //   }
-    // }
-
-    &__img{
-      // &--mr {
-      //   margin-right: 38px;
-      //   @media screen and (max-width: 1020px)  {
-      //     margin-right: 0;
-      //   }
-      // }
     }
   }
 
@@ -204,14 +129,14 @@
   }
 
   &__dashes-hor {
-    max-width: 103px;
+    max-width: 103px !important;
     position: absolute;
     right: 226px;
     top: 0;
   }
 
   &__arrow-right {
-    max-width: 76px;
+    max-width: 76px !important;
     position: absolute;
     bottom: -20px;
     left: 0;
@@ -222,7 +147,7 @@
   }
 
   &__squares {
-    max-width: 159px;
+    max-width: 159px !important;
     position: absolute;
     right: 0;
     top: -44px;
@@ -234,7 +159,7 @@
   }
 
   &__2-lines {
-    max-width: 31px;
+    max-width: 31px !important;
     position: absolute;
     bottom: 90px;
     right: 329px;
@@ -248,7 +173,7 @@
   }
 
   &__arrow-down {
-    max-width: 41px;
+    max-width: 41px !important;
     position: absolute;
     right: 0;
     top: -100px;
@@ -261,7 +186,7 @@
   }
 
   &__dashed-ver {
-    width: 14px;
+    width: 14px !important;
     position: absolute;
     left: 0;
     top: 60%;
