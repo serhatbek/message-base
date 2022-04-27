@@ -11,54 +11,31 @@
     grid-template-columns: repeat(4, 1fr);
     grid-template-areas: 
     "reports messages help api"
-    "packages profile cta api";
+    "packages profile action api";
     column-gap: 66px;
 
     @media screen and (max-width: 930px)  {
       grid-template-columns: repeat(3, 1fr);
       grid-template-areas: 
-    "reports profile cta"
-    "packages help api"
-    "messages help api";
+      "reports profile action"
+      "packages help api"
+      "messages help api";
     }
 
     @media screen and (max-width: 620px)  {
       grid-template-columns: repeat(2, 1fr);
       column-gap: 0;
       grid-template-areas: 
-    "reports help"
-    "packages help"
-    "messages cta"
-    "profile ."
-    "api api";
+      "reports help"
+      "packages help"
+      "messages action"
+      "profile ."
+      "api api";
     }
   }
 
-  &__reports {
+  .reports {
     grid-area: reports;
-  }
-
-  &__messages {
-    grid-area: messages;
-  }
-
-  &__help {
-    grid-area: help;
-  }
-
-  &__profile {
-    grid-area: profile;
-  }
-
-  &__cta {
-    grid-area: cta;
-  }
-
-  &__api {
-    grid-area: api;
-  }
-
-  &__list {
     margin-bottom: 12px;
 
     @media screen and (max-width: 768px)  {
@@ -80,7 +57,28 @@
     }
   }
 
-  &__cta {
+  .messages {
+    @extend .reports;
+    grid-area: messages;
+  }
+
+  .packages {
+    @extend .reports;
+    grid-area: packages;
+  }
+
+  .help {
+    @extend .reports;
+    grid-area: help;
+  }
+
+  .profile {
+    @extend .reports;
+    grid-area: profile;
+  }
+
+  .action {
+    grid-area: action;
     padding: 19px 20px 19px 25px;
     background-color: $white;
     height: 86px;
@@ -112,7 +110,8 @@
     }
   }
 
-  &__api {
+  .api {
+    grid-area: api;
     width: 230px;
     @include flexBox($direction:column, $justify: center, $align:center, $wrap:nowrap);
     border-radius: 10px;

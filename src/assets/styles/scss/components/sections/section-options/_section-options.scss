@@ -7,7 +7,7 @@
   
   &__box {
 
-    > div:first-child > div, > div:nth-child(3) > div {
+    > div:nth-child(odd) > div {
       text-align: left;
       order: 2;
 
@@ -16,7 +16,7 @@
       }
     }
 
-    > div:nth-child(2) > div, > div:nth-child(4) > div {
+    > div:nth-child(even) > div{
       @media screen and (max-width: 1020px)  {
         text-align: center;
         order: 2;

@@ -1,83 +1,74 @@
-.cta {
-  padding: 36px 0;
-  margin: 0 auto;
 
-  .container {
-  @include flexBox($direction:false, $justify: center, $align:center, $wrap:false);
-    @media screen and (max-width: 560px)  {
-      padding: 0;
-    }
-
-    .cta__box {
+    .cta {
       color: $white;
-      max-width: 1030px;
       width: 100%;
-      border-radius: 10;  
-      padding: 50px 96px 30px 50px;
-      @include flexBox($direction:false, $justify: space-between, $align:center, $wrap:nowrap);
-      background: linear-gradient(270deg, rgba(239,183,0,1) 0%, rgba(246,137,41,1) 100%);
-
-      @media screen and (max-width: 996px)  {
-        flex-direction: column;
-        padding: 40px 30px 30px 30px;
-        margin: 0 39px;
-      }
-
-      @media screen and (max-width: 638px)  {
-        margin: 0 15px;
-        padding: 20px 15px;
-      }
-
+      
       > div {
+        margin: 0 auto;
+        border-radius: 10;  
+        padding: 50px 96px 30px 50px;
+        background: linear-gradient(270deg, rgba(239,183,0,1) 0%, rgba(246,137,41,1) 100%);
+        max-width: 1030px;
+        @include flexBox($direction:false, $justify: space-between, $align:center, $wrap:false);
+
         @media screen and (max-width: 996px)  {
-          text-align: center;
-          order: 2;
-        }
-
-        h2 {
-          font-size: 31px;
-          font-weight: bold;
-          margin-bottom: 15px;
-
-          @media screen and (max-width: 560px)  {
-          font-size: 24px;
-          }
-        }
-
-        p {
-          margin-bottom: 32px;
-
-          @media screen and (max-width: 560px)  {
-          font-size: 15px;
-          font-weight: 300;
-          }
+          flex-direction: column;
+          padding-right: 50px;
         }
 
         > div {
-          .btn {
-            @media screen and (max-width: 660px)  {
-              display: block;
-              width: 100%;
-              padding: 14px;
-              font-size: 14px;
+          max-width: 642px;
+          @media screen and (max-width: 996px)  {
+            text-align: center;
+            order: 2;
+          }
+  
+          h2 {
+            font-size: 31px;
+            font-weight: bold;
+            margin-bottom: 15px;
+  
+            @media screen and (max-width: 560px)  {
+            font-size: 24px;
             }
           }
-
-          .btn:first-child {
-            margin-right: 20px;
-
-            @media screen and (max-width: 638px)  {
-              margin-right: 0;
-              margin-bottom: 20px;
+  
+          p {
+            margin-bottom: 32px;
+  
+            @media screen and (max-width: 560px)  {
+            font-size: 15px;
+            font-weight: 300;
+            }
+          }
+  
+          > div {
+            .btn {
+              @media screen and (max-width: 660px)  {
+                display: block;
+                width: 100%;
+                padding: 14px;
+                font-size: 14px;
+              }
+            }
+  
+            .btn:first-child {
+              margin-right: 20px;
+  
+              @media screen and (max-width: 638px)  {
+                margin-right: 0;
+                margin-bottom: 20px;
+              }
             }
           }
         }
+
       }
 
+
       figure {
-        width: 122px;
+        max-width: 122px;
         align-self: baseline;
-        margin-left: 150px;
 
         @media screen and (max-width: 996px)  {
           order: 1;
@@ -95,7 +86,7 @@
         }
       }
 
-      &--purple {
+    > div.cta--purple {
         background: linear-gradient(270deg, rgba(34,44,127,1) 31%, rgba(63,72,154,1) 100%);
 
         a {
@@ -109,5 +100,3 @@
         }
       }
     }
-  }
-}
